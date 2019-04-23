@@ -10,6 +10,8 @@ from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import classification_report
+import warnings
+warnings.filterwarnings('ignore')
 
 
 # Load data from numpy file
@@ -64,3 +66,4 @@ for score in scores:
     y_true, y_pred = y_test, clf.predict(X_test)
     print(classification_report(y_true, y_pred))
     print('')
+
